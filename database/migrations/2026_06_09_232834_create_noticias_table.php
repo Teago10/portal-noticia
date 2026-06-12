@@ -17,9 +17,9 @@ return new class extends Migration
             $table->text('resumo');
             $table->longText('conteudo');
             $table->string('imagem')->nullable;
-            $table->tinyInteger('status',1);
+            $table->tinyInteger('status');
             $table->foreignId('usuario_id')->constrained()->restrictOnDelete();
-            $table->foreignId('cotegorias_id')->constrained();
+            $table->foreignId('categorias_id')->constrained();
             $table->timestamps();
         });
     }
