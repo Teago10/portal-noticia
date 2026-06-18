@@ -9,6 +9,7 @@ class NoticiaController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * Lista de Notícias
      */
     public function index()
     {
@@ -17,10 +18,11 @@ class NoticiaController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * Mostrar formulário para cadastrar notícia
      */
     public function create()
     {
-        //
+        return view('admin.noticias.cadastrar');
     }
 
     /**
