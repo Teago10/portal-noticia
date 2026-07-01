@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -22,7 +23,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'laravel12.jpg',
                 'status' => 1,
                 'usuario_id' => 1,
-                'categorias_id' => 1
+                'categorias_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Mercado de tecnologia segue em expansão',
@@ -31,7 +34,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'mercado-ti.jpg',
                 'status' => 1,
                 'usuario_id' => 2,
-                'categorias_id' => 2
+                'categorias_id' => 2,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'PHP continua relevante no desenvolvimento web',
@@ -40,7 +45,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'php.jpg',
                 'status' => 1,
                 'usuario_id' => 1,
-                'categorias_id' => 1
+                'categorias_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Senac promove feira de inovação',
@@ -49,7 +56,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'senac.jpg',
                 'status' => 1,
                 'usuario_id' => 2,
-                'categorias_id' => 3
+                'categorias_id' => 3,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Inteligência Artificial ganha espaço',
@@ -58,7 +67,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'ia.jpg',
                 'status' => 1,
                 'usuario_id' => 1,
-                'categorias_id' => 4
+                'categorias_id' => 4,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'C# se destaca em aplicações corporativas',
@@ -67,7 +78,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'csharp.jpg',
                 'status' => 1,
                 'usuario_id' => 2,
-                'categorias_id' => 1
+                'categorias_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Segurança digital preocupa organizações',
@@ -76,7 +89,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'seguranca.jpg',
                 'status' => 1,
                 'usuario_id' => 1,
-                'categorias_id' => 5
+                'categorias_id' => 5,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Computação em nuvem cresce no Brasil',
@@ -85,7 +100,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'cloud.jpg',
                 'status' => 1,
                 'usuario_id' => 2,
-                'categorias_id' => 2
+                'categorias_id' => 2,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Desenvolvimento Full Stack está em alta',
@@ -94,7 +111,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'fullstack.jpg',
                 'status' => 1,
                 'usuario_id' => 1,
-                'categorias_id' => 1
+                'categorias_id' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [
                 'titulo' => 'Banco de dados é fundamental para sistemas modernos',
@@ -103,7 +122,9 @@ class NoticiaSeeder extends Seeder
                 'imagem' => 'banco-dados.jpg',
                 'status' => 1,
                 'usuario_id' => 2,
-                'categorias_id' => 2
+                'categorias_id' => 2,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         ]);
     }
