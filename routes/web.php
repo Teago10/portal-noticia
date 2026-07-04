@@ -6,7 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/", [HomeController::class, "home"])->name('home');
-Route::get("/fale-comigo", [HomeController::class, "contato"])->name('contato');
+Route::get("/conosco", [HomeController::class, "contato"])->name("contato");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -14,13 +14,25 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/dashboard/noticias', [NoticiaController::class,'index'])->name('admin.noticias.index');
-    Route:: get('/dashboard/noticias/cadastrar', [NoticiaController::class, 'create'])->name('admin.noticias.cadastrar');
-    Route:: delete('/dashboard/noticias/excluir/{id}', [NoticiaController::class, 'destroy'])->name('admin.noticias.excluir');
+    Route::get('/dashboard/noticias', [NoticiaController::class, 'index'])->name('admin.noticias.index');
+
+
+    Route::get('/dashboard/noticias/cadastrar', [NoticiaController::class, 'create'])->name('admin.noticias.cadastrar');
+
+    Route::post('/dashboard/noticias/cadastrar', [NoticiaController::class, 'store'])->name('admin.noticias.armazenar');
+
+    Route::get('/dashboard/noticias/editar/{id}', [NoticiaController::class, 'edit'])->name('admin.noticias.editar');
+
+    Route::put('/dashboard/noticias/editar/{id}', [NoticiaController::class, 'update'])->name('admin.noticias.atualizar');
+
+
+    Route::delete('/dashboard/noticias/excluir/{id}', [NoticiaController::class, 'destroy'])->name('admin.noticias.excluir');
+
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

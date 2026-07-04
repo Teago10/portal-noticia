@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('imagem')->nullable;
             $table->tinyInteger('status');
             $table->foreignId('usuario_id')->constrained()->restrictOnDelete();
-            $table->foreignId('categorias_id')->constrained();
+            $table->foreignId('categoria_id')->constrained();
             $table->timestamps();
         });
     }
