@@ -77,7 +77,7 @@ class NoticiaApiController extends Controller
             'resumo' => 'required',
             'conteudo' => 'required|min:20',
             'categoria_id' => 'required',
-            'imagem' => 'nullable|required|image|mimes:jpeg,png,jpg,webp|max:2048'
+            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048'
         ]);
 
         $noticia = Noticia::findOrFail($id);
